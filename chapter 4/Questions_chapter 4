@@ -1,0 +1,5 @@
+Indentation is mentioned on page 69. It says that one should use 4 spaces as an indent and that the space key should be used instead of the tab key
+because a mixture of the two can confuse python. Does Pycharm automatically convert tabs into 4 spaces?
+    Pycharm automatically converts the tab key into 4 spaces
+Why should there always be a newline after the last line of code?(PEP8)
+    Just the convention, indicates that the file is finished, if the last blank line is missing, people might think that the file is damadged

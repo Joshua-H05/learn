@@ -1,0 +1,11 @@
+Why does the del function not have parentheses?
+    del is a command, not a function (old)-->different syntax
+Why is the index indicated with parentheses in the pop function? e.g. motorcycles.pop(1)
+    function--> take parameters, square brackets are for slicing--> indexing difference: pop removes the value and returns it, whereas slicing simply gives you the value
+What's the difference between the pop function& the remove function?
+    Pop removes the entry from the list and returns the value--> modifies list& returns value, remove modifies the list by removing the item
+    (difference between del& remove: one is a command, the other is a function, del only works with index numbers, remove only works with values of the items)
+can I use sorted= sort() to achieve the same result as the sorted() function?
+    possible but fiddly, sorted is more simple
+Temporarily sort a list in reverse alphabetical order using the sorted() function:
+    print(sorted(list, reverse=True))

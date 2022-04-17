@@ -1,0 +1,46 @@
+Why can spaces not be used in variables? Is it because they are used to separate?--> values divided by a space are no longer seen as a single entity?-->
+yes, use underscores instead of spaces
+
+What's the difference between single and double quotes when we put them around strings?
+The two are equivalent but double quotes are better because single quotes occur more in natural texts (e.g. apostrophes-->
+python confuses apostrophes with single quotes) if you need to embed double quotes, put a back slash in front of the embedded double quotes
+
+
+Notes 27 march 2022:
+Usually:
+    name= "andy"
+    another_name= name
+    copies the value of the variable name over to another_name--> the two variables now have the same value but are not associated
+    --> one can be changed without affecting the other
+Lists and certain other data types:
+    name= ["andy", "fred"]
+    another_name= name
+    copying by reference--> associates the two--> both, when used, refer to the same address in memory
+    BUT use .copy() (e.g. names.copy()) to copy the value of the list over--> copying by value
+
+String slicing:
+    you can use a for loop:
+    letters = "abcdefg":
+    for letter in letters:
+        print (letter)
+        result--> a
+    Or use string slicing to print individual members of a list
+    print(letters[0])--> refers to a because python is zero based
+    letters[1:3] --> bc, doesn't print d because the last one is excluded
+    syntax start index (inclusive) : stop index (exclusive)
+    [: stop]--> print from the beginning to the stop index (exclusive)
+    [start index:] print from the start index (inclusive) to the end
+    [:] start at the beginning and stop at the end
+    use negative numbers to count from the end of the list (if you use negative numbers you start at -1 instead of 0)
+    letters[::2]--> steps: print every second letter
+    letters[::-1]--> reverse a string or list
+    letters[::-2]--> reverse a string or list and print every other one
+    negative numbers in this function: reverse the order
+    first colons indicate the start, the second indicate the stop and the following index indicates the step
+
+Why is the amount of decimals given arbitrarily?
+    Floating point precision error: Floating points: only approximations of what the number should be--> not always exact
+    Reason: We think in decimals, but computers only understand binary--> certain numbers don't translate from decimals to binary correctly. (use rounding, often 4 decimal places to correct)
+Why do divisions always result in floats?
+Python interpreter?--> python console in pycharm
+
