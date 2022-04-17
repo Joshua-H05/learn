@@ -1,7 +1,6 @@
 # Inspired by "Testing multiple conditions" on page 83
 available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
-toppings = input("What would you like on your pizza? Please enter the ingredients separated by a comma: ")  # Is there any way to make python put words into the list
-# instead of individual letters?
+toppings = input("What would you like on your pizza? Please enter the ingredients separated by a comma: ")
 toppings_list = toppings.split(",")
 order = []
 if toppings_list:
@@ -14,6 +13,7 @@ if toppings_list:
 print(f"Here's a list of the toppings you've ordered: {', '.join(order)}")
 
 # Alternative
+
 available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
 toppings_alt = []
 first_topping = input("What would you like on your pizza? Please write one item only: ")
