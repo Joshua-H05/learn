@@ -13,7 +13,6 @@ if toppings_list:
             order.append(replacement)
 print(f"Here's a list of the toppings you've ordered: {', '.join(order)}")
 
-
 # Alternative
 available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
 toppings_alt = []
