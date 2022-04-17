@@ -24,9 +24,6 @@ def lower_all(objects):  # defining the list
     # empty list at the beginning of each iteration
     for object in objects:
         item_list.append(object)  # this for loop turns the tuple into a list
-    """for index in range(len(item_list)):
-        item_list[index] = item_list[index].lower()
-    objects=item_list"""
     lower_lists(item_list)  # this line uses the previously defined function "lower_lists" to turn
     # the newly defined list into a list with lower case items only
     return item_list
