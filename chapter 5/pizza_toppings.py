@@ -1,7 +1,18 @@
 # Inspired by "Testing multiple conditions" on page 83
-toppings = list(input("What would you like on your pizza? "))  # Is there any way to make python put words into the list
+available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
+toppings = input("What would you like on your pizza? Please enter the ingredients separated by a comma: ")  # Is there any way to make python put words into the list
 # instead of individual letters?
-print(toppings)
+toppings_list = toppings.split(",")
+order = []
+if toppings_list:
+    for pizza_topping in toppings_list:
+        if pizza_topping in available:
+            order.append(pizza_topping)
+        else:
+            replacement = input(f"Sorry, {pizza_topping} is not available. Please select something else. ")
+            order.append(replacement)
+print(f"Here's a list of the toppings you've ordered: {', '.join(order)}")
+
 
 # Alternative
 available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
