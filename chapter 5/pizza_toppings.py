@@ -13,7 +13,6 @@ if toppings_list:
 print(f"Here's a list of the toppings you've ordered: {', '.join(order)}")
 
 # Alternative
-
 available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
 toppings_alt = []
 first_topping = input("What would you like on your pizza? Please write one item only: ")
