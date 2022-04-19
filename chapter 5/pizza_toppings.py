@@ -1,12 +1,17 @@
 # Inspired by "Testing multiple conditions" on page 83
-available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]
+available = ["cheese", "pepperoni", "mushrooms", "sausage", "chicken"]  # all the available toppings
+# Asks users for the toppings he or she wants
 toppings = input("What would you like on your pizza? Please enter the ingredients separated by a comma: ")
+# Turning the string containing the list of requested ingredients into a list using the split function
 toppings_list = toppings.split(",")
+# Order is now an empty list
 order = []
+# Checking if all the requested toppings are available
 if toppings_list:
     for pizza_topping in toppings_list:
-        if pizza_topping in available:
+        if pizza_topping.strip() in available:
             order.append(pizza_topping)
+            # Asking the user to change their order because at least one topping is unavailable
         else:
             replacement = input(f"Sorry, {pizza_topping} is not available. Please select something else. ")
             order.append(replacement)
