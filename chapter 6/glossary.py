@@ -3,8 +3,9 @@ definitions = {
     ".join()": "an in-built method used to join an iterable's elements, "
                "separated by a string separator, which is specified by you",
     ".split()": "splits a string into a list based on a character specified by you",
+    "set": "A collection in which each item must be unique"
 }
-print(f"slicing: {definitions['slicing']}\n")
-print(f".join(): {definitions['.join()']}\n")
-print(f".split(): {definitions['.split()']}\n")
+for term, definition in definitions.items():
+    print (f" {term} means: {definition}")
+
 

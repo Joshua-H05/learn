@@ -5,8 +5,18 @@ fav_numbers = {
     "Jane": 12,
     "Max": 6
 }
-print(f"Tom's favorite number is {fav_numbers['Tom']}")
-print(f"Alice's's favorite number is {fav_numbers['Alice']}")
-print(f"Joshua's favorite number is {fav_numbers['Joshua']}")
-print(f"Jane's favorite number is {fav_numbers['Jane']}")
-print(f"Max's favorite number is {fav_numbers['Max']}")
+for name, number in fav_numbers.items():
+    print(f"{name}'s favorite number is {number}\n")
+for number in fav_numbers.values():
+    print (number)
+
+your_fav_number = {}
+numbers = input("What's your favorite number?")
+your_fav_number["your favorite number"] = numbers
+friends_numbers = input("What's your friend's favorite number?")
+your_fav_number["your friend's number"] = friends_numbers
+for person, number in your_fav_number.items():
+    print(f"{person} is {number}\n")
+for person in sorted(your_fav_number.keys()):
+    number = your_fav_number[person]
+    print(f"{person},{number}")
