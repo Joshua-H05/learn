@@ -13,7 +13,7 @@ for name, persons_fav_numbers in fav_numbers.items():
 
 
 
-"""your_fav_number = {}
+your_fav_number = {}
 numbers = input("What's your favorite number?")
 your_fav_number["your favorite number"] = numbers
 friends_numbers = input("What's your friend's favorite number?")
@@ -22,4 +22,4 @@ for person, number in your_fav_number.items():
     print(f"{person} is {number}\n")
 for person in sorted(your_fav_number.keys()):
     number = your_fav_number[person]
-    print(f"{person},{number}")"""
+    print(f"{person},{number}")
