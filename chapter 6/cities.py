@@ -14,12 +14,13 @@ list_of_cities = []
 # Iterates around the keys in the main dictionary, taking each key and appending it into the list of cities
 for city in cities.keys():
     list_of_cities.append(city)
+print(list_of_cities)
 # Asks the user for his/ her favorite city
-favorite_city = input("What is your favorite city?")
+favorite_city = input("What is your favorite city?").title()
 # Checks if the user's favorite city is in the list of cities/ in the dictionary
 # If it is, information on the city is printed. If not, the program lets the user know
-if favorite_city in list_of_cities:
-    print(f"Here is some information on {favorite_city}: "
+if favorite_city in list_of_cities:  # Why can I not add the .title() function to favorite_city?
+    print(f"Here is some information on {favorite_city.title()}: "
             f"It is in {cities[favorite_city]['continent']}, "
             f"It has a population of {cities[favorite_city]['population']}"
             f" and its official language is {cities[favorite_city]['language']} ")
