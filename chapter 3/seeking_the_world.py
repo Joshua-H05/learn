@@ -1,4 +1,4 @@
-places=["maldives", "dubai", "scandinavia", "moscow", "iceland", "africa"]
+places = ["maldives", "dubai", "scandinavia", "moscow", "iceland", "africa"]
 print(places)
 print(sorted(places))
 print(places)
