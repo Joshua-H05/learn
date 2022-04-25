@@ -19,8 +19,12 @@ print(list_of_cities)
 favorite_city = input("What is your favorite city?").title()
 # Checks if the user's favorite city is in the list of cities/ in the dictionary
 # If it is, information on the city is printed. If not, the program lets the user know
-if favorite_city in list_of_cities:  # Why can I not add the .title() function to favorite_city?
-    print(f"Here is some information on {favorite_city.title()}: "
+if favorite_city in list_of_cities:
+    # Adding the .title() function to favorite_city here doesn't work because it only capitalizes the value of the
+    # variable in this line.
+    # This isn't enough because the variable needs to be capitalized at all times as it is needed to access values later
+    # in lines 28-30
+    print(f"Here is some information on {favorite_city}: "
             f"It is in {cities[favorite_city]['continent']}, "
             f"It has a population of {cities[favorite_city]['population']}"
             f" and its official language is {cities[favorite_city]['language']} ")
