@@ -15,8 +15,11 @@ for city, info in cities.items():
     favorite_city = input("What is your favorite city?")
     # If the input corresponds to one ot the cities in the dictionary, information on the city is printed
     if favorite_city in list_of_cities:
-        print(f"{cities[favorite_city]}")
-        for city, info in cities[favorite_city]
-# I would like to access the embedded dictionary with the key that corresponds to the input given by the user
-# (the value in favorite_cities) so that if the user prints "Paris" for example, information on Paris is given.
+        print(f"{cities[favorite_city]}")  # In this line, I see that I can access
+        # the nested dictionary using "cities[favorite_city]
+        for city, info in cities[favorite_city].items(): # The items function doesn't work here
+    # I would like to access the embedded dictionary with the key that corresponds to the input given by the user
+    # (the value in favorite_cities) so that if the user prints "Paris" for example, information on Paris is given.
+    elif favorite_city not in list_of_cities:  # Python says there is an indentation error here as well.
+        print(f"Sorry, {favorite_city} is not in our database.")
 
