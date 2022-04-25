@@ -1,10 +1,11 @@
 fav_numbers = {
-    "Tom": [2,3,10],
+    "Tom": [2, 3, 10],
     "Alice": [7],
-    "Joshua": [9,12],
+    "Joshua": [9, 12],
     "Jane": [12],
-    "Max":[6,8]
+    "Max": [6, 8]
 }
+
 for name, persons_fav_numbers in fav_numbers.items():
     if len(persons_fav_numbers) == 1:
         print(f"{name}'s favorite number is {persons_fav_numbers[0]}\n")
@@ -19,14 +20,11 @@ for name, persons_fav_numbers in fav_numbers.items():
         print(f"{name}'s favorite numbers are {' and '.join(fav_numbers_string)}")
         # list comprehension: completes lines 14-17 all in one line-->
         # essentially: for every number in persons_fav_numbers: turn into a string--> everything is then put into a list
-        # list becomes the argument to join()
+        # the list becomes the argument to join()
         print(f"{name}'s favorite numbers are {' and '.join([str(num) for num in persons_fav_numbers])}")
 # print(f"{name}'s favorite numbers are {' and '.join([str(num) for num in persons_fav_numbers if num %2 == 0])}")
 # if num %2 == 0 --> an if statement inside a list comprehension
 # meaning: if the remainder of num/2 == 0--> if the number is even
-
-
-
 
 
 your_fav_number = {}

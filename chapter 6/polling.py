@@ -6,7 +6,7 @@ favorite_languages = {
 }
 should_take_poll = ["Jen", "Edward", "Phil", "Tom"]
 for person in favorite_languages.keys():
-    print (f"Hi, {person}")
+    print(f"Hi, {person}")
     if person in should_take_poll:
         language = favorite_languages[person]
         print(f"{person}, I see you like {language}!\n")

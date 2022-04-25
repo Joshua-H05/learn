@@ -7,5 +7,3 @@ pets = {
 for person, pet in pets.items():
     print(f"{person} is a {pet['species']}. His owner is {pet['owner']} and he is {pet['age']}")
 # advantage of using dictionaries: Easier to access the information stored
-
-
