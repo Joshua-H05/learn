@@ -24,9 +24,9 @@ if favorite_city in list_of_cities:
     # variable in this line.
     # This isn't enough because the variable needs to be capitalized at all times as it is needed to access values later
     # in lines 28-30
-    print(f"Here is some information on {favorite_city}: "
-            f"It is in {cities[favorite_city]['continent']}, "
-            f"It has a population of {cities[favorite_city]['population']}"
-            f" and its official language is {cities[favorite_city]['language']} ")
+    print(f'Here is some information on {favorite_city}: '
+          f'It is in {cities[favorite_city]["continent"]}, '
+          f'It has a population of {cities[favorite_city]["population"]}'
+          f' and its official language is {cities[favorite_city]["language"]} ')
 elif favorite_city not in list_of_cities:
     print(f"Sorry, {favorite_city} is not in our database.")
