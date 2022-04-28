@@ -40,3 +40,17 @@ while active:
             print(f"{number} is a multiple of 10")
         else:
             print(f"{number} is not a multiple of 10")
+
+
+prompt = "Give me a number and I'll tell you if it's a multiple of 10: "
+prompt += "\n press q and then enter to quit "
+number = ""
+while True:
+    number = input(prompt)
+    if number == "q":
+        break
+    number = int(number)
+    if number % 10 == 0:
+        print(f"{number} is a multiple of 10")
+    else:
+        print(f"{number} is not a multiple of 10")
