@@ -11,22 +11,21 @@ while number != "q":
     else:
         print(f"{number} is not a multiple of 10")
     number = input(prompt)
-# Question: Is there a way to achieve the same effect by using the input function only once?
 
 # Solution:
 prompt = "Give me a number and I'll tell you if it's a multiple of 10: "
 prompt += "\n press q and then enter to quit "
 number = ""  # Sets number as an empty string so that the program can be run the fist time around
 while number != "q":
-    number = input(prompt)  #
+    number = input(prompt)
     if number != "q":  # If number is "q", this round of the program stops and python goes back to
         # the line "while number != "q":" and now that number = "q" the conditional testing fails and the code stops
+        # redundant: duplicate code " number != "q"
         number = int(number)
         if number % 10 == 0:
             print(f"{number} is a multiple of 10")
         else:
             print(f"{number} is not a multiple of 10")
-# Which is better?
 
 prompt = "Give me a number and I'll tell you if it's a multiple of 10: "
 prompt += "\n press q and then enter to quit "
@@ -42,10 +41,9 @@ while active:
         else:
             print(f"{number} is not a multiple of 10")
 
-
+# Most efficient& simple do redundancies ( no need to initialize variables tec.)
 prompt = "Give me a number and I'll tell you if it's a multiple of 10: "
 prompt += "\n press q and then enter to quit "
-number = ""
 while True:
     number = input(prompt)
     if number == "q":  # if the input is "q", stop the program
