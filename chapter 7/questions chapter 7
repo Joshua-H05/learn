@@ -1,1 +1,12 @@
-Why should for loops not be used to modify lists? 
+Why should for loops not be used to modify lists?
+example:
+numbers = [5, 6, 7, 8, 9]
+for number in numbers:
+    numbers.append(9)
+print(numbers)
+This doesn't work because the for loop keeps on modifying the list that it should be iterating around, which doesn't
+make sense
+
+For vs While loops:
+    for loops: finite iteration
+    while loops: unknown number of iterations
