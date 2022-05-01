@@ -1,6 +1,11 @@
 information = {}
+
+
 def message(name, learning):
+    """Prints the name of the user and what he is learning"""
     print(f"{name} is currently learning {learning}.\n ")
+
+
 while True:
     name = input("What's your name? ")
     learning = input("What are you learning right now? ")
