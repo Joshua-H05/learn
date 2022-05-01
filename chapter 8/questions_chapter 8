@@ -1,1 +1,2 @@
 Why should doc strings be used instead of comments when defining a function? What is the main difference between the two?
+Do all empty variables evaluate to False in a conditional test? (empty strings, lists, dictionaries etc.)
