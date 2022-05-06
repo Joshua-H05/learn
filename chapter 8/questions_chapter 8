@@ -1,3 +1,5 @@
 Why should doc strings be used instead of comments when defining a function? What is the main difference between the two?
 Do all empty variables evaluate to False in a conditional test? (empty strings, lists, dictionaries etc.)
-Is it a good idea to name the parameters of a function and the variables used to prompt for values of these parameters the same thing? 
+Is it a good idea to name the parameters of a function and the variables used to prompt for values of these parameters the same thing?
+What does the PEP8 error "Shadows name from outer scope mean?"
+On page 143, why does the author define the variable "msg" and then print it on a separate line? Is there an advantage to doing so?
