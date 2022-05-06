@@ -1,5 +1,5 @@
 def format_location(city, country):
-    """"""
+    """Creates a string containing information on where a person lives"""
     location = f"{city},{country}"
     return location
 
