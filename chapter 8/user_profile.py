@@ -5,4 +5,4 @@ def profile_maker(first_name, last_name, **info):
 
 
 print(profile_maker("Joshua", "Hu", nationality="chinese"))  # does the variable "nationality" not have to be put in
-# quotation marks?
+# quotation marks? Is it because it's a parameter
