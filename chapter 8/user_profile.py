@@ -5,4 +5,5 @@ def profile_maker(first_name, last_name, **info):
 
 
 print(profile_maker("Joshua", "Hu", nationality="chinese"))  # does the variable "nationality" not have to be put in
-# quotation marks? Is it because it's a parameter
+# quotation marks? Is it because it's a parameter? If so, does Python just automatically convert the parameters and
+# their arguments into key value pairs in the dictionary?
