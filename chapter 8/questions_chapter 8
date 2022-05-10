@@ -1,5 +1,28 @@
 Why should doc strings be used instead of comments when defining a function? What is the main difference between the two?
+    Doc string: comment that describes what a class, function or pyfile does. A comment tends to be brief and a doc string tends to be
+    more verbose.
+
 Do all empty variables evaluate to False in a conditional test? (empty strings, lists, dictionaries etc.)
+    Truthiness: 1 is definitely true, 0 is definitely false
+    empty strings, tuples, dictionaries etc. are false
+    any number that is not 0 is true
+    None means nothing: variable that has not been initialised--> evaluates to false
+    "==" vs "is":
+        "==" --> do the two have the same values?
+        "is"--> are they actually the same thing?
+        use "is" to compare something to True, False or None because they are actually the same thing, whereas
+        "==" simply denotes that the two have the same value
+        given a variable "a"--> you can say "if a is true:" or "if a: "
 Is it a good idea to name the parameters of a function and the variables used to prompt for values of these parameters the same thing?
-What does the PEP8 error "Shadows name from outer scope mean?"
+    Called shadowing--> if the variables inside a function have the same name as a parameter of a function, the variable of the function shadows that of the caller.
 On page 143, why does the author define the variable "msg" and then print it on a separate line? Is there an advantage to doing so?
+    Defining the string as a variable allows you to use the same thing multiple times
+
+scope of a variable--> lifetime: Some live as long as the code is running but some (e.g. variables inside a function)
+Every time a function is called, it's added to a stack--> different levels of variables: when a function is called,
+the variable used by the function is on a higher level than the rest of the variables, if that function calls another one,
+the variable used by the third function is on yet another level higher--> stacks
+    analogy: When washing plates, you stack washed plates on top of each other so the plate you see is always on top--> whenever a function is called,
+    the variable it uses is stacked on top of all the others, like a new washed plate.
+
+    Shadowing: When there is a variable in a piece of code and a function using another variable with the same name is called, the variable used by the function covers the other variable--> shadowing

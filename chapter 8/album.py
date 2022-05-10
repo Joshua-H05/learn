@@ -20,3 +20,5 @@ while True:
         break
     album_info = make_album(artist, album, number_of_songs)
     print(album_info)
+    print(make_album(artist, album, number_of_songs))  # same function as lines 21& 22 difference: in lines 21& 22
+    # a variable is defined and ic can be used again without calling the function
