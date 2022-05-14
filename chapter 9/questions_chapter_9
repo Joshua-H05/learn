@@ -1,2 +1,29 @@
-What is the self parameter, what does it do and why do we need it?
-What does the self prefix do? 
+Classes:
+    Pass statement: used for something that hasn't been fully developed so the code you have written works but the rest is skipped
+    checking = account()--> instantiation: "checking" is the instance
+    the class "account" has now been assigned to the variable "checking", the type of which is account
+    Classes can contain functions
+    Each instance has data that is defined (assigned or changed) in the class but is stored and belongs to the instance
+    To allow each instance to store its own data, we need to initialize data using the
+    __init(self, variable1, variable_2, etc.)__ (called a dunder) function:
+        When you create an instance of a class, Python automatically looks for a dunder, if it does, the code is executed
+        Dunder--> initializes data, giving it an initial value
+    The variable self acts as a container (actually a dictionary behind the scenes) that contains all the variables that are part of self--> all one has to do is
+    pass the variable self to the function--> gives it access to all the variables that belong to the instance
+    Side note: use underscores to sort numbers to see how many digits there are eg. 100_000
+    Name space (e.g. self): all variables that have the same namespace belong to the same class
+guard clause : if __name__ == "__main__": if a program is run __name__ is set to main, if it is imported, it doesn't, the conditional
+statement evaluated to false and the code beneath it doesn't run
+define a variable and save all the code that you don't want to be run if the module is imported under it and then write:
+if __name__ == "__main__":
+    function()
+This way, if you really want to run the function, you can use it as well
+
+Inheritance classes take code from other classes, the class that is being inherited from--> superclass
+The class that is inheriting --> subclass
+In the subclass, you can override certain methods or add methods
+
+
+named with nouns
+way to organize code
+classes can be imported as modules (good ideas to use import directly not from import)
