@@ -1,0 +1,29 @@
+Floating point error: When performing calculations, python must convert decimal numbers to binary and back--> certain discrepancies
+--> round to a certain number of digits to get rid of it
+
+Debugging
+    pysnoop--> must be imported (3rd party module)
+    decorator must be used--> @pysnooper.snoop():--> @pysnooper is the module and .snoop() is the function
+        shows you what python is executing line by line so you can identify the error
+    Decorator as are wrapper--> execute some code before and/or after a function is called
+
+pypi.org: python package index
+
+logger:
+    loguru must be imported--> from loguru import logger
+    reason to import like this: python comes with a logger--> by importing like this, the native logger is overwritten by the loguru logger
+    Sometimes, we print certain things in functions just to check if everything is running correctly. When we know everything is correct,
+    we need to comment the print functions out or delete them to clean our code up--> extra work--> a logger can be used to show you the
+    results you want to check--> can replace the print statements used for that purpose
+
+    Logging functions have different levels. debug, info, warning, error,--> syntax: logging.level()--> produce the same output but in different situations
+    e.g. logging.debug() prints whenever its called whereas logging.error() only prints if there is an error--> all depends on the level
+    to set the level logger.level("level")--> set it to one of the above mentioned levels--> all the other levels are ignored
+
+    Logging tries not to interfere too much with the running of the program-->logs asynchronously--> waits till the program isn't as busy and then executes
+
+
+One can write one's own decorators:
+    If a decorator comes before a function that is called, python runs the decorator, passing the function to the decorator as a parameter--> wraps (insert code)
+     some code
+    around (before and/or after) the function
