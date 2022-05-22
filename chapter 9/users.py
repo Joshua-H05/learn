@@ -17,3 +17,4 @@ class User:
 person_1 = User("Joshua", "Hu", 16, "student")
 person_1.profile_maker()
 person_1.greet_user()
+
