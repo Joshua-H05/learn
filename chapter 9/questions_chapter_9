@@ -60,8 +60,10 @@ Why is this? Is it because the wrapper extends the length of the program and I j
 
 Would I be correct in saying that I still have to initialise a subclass but that I can use the super().__innit()__ to copy all the methods from the parent class?
 
-Instances as attributes--> example: does the line numbered 4 (self.battery = Battery() create an instance of the entire class? What if more than one value is returned in the instance of the class Battery?
+Instances as attributes--> example: does the line numbered 4 (self.battery = Battery() create an instance of the entire class?
+What if more than one value is returned in the instance of the class Battery? Is there any way to access only one of them?
 e.g. class Battery:
     def __innit__(self, brand = "Tesla", size = 75)
         self.brand = brand
         self.size = size
+perhaps something like self.battery = Battery.battery_size()?
