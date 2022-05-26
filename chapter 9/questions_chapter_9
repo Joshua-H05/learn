@@ -55,3 +55,5 @@ the class "account" has now been assigned to the variable "checking", the type o
 
 Are attributes simply variables in the context of classes?
 
+After I started using Pysnooper, python has started showing me that there is an error on line 305, for example, which doesn't exist.
+Why is this? Is it because the wrapper extends the length of the program and I just don't see it?
