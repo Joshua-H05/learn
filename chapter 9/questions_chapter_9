@@ -57,3 +57,5 @@ Are attributes simply variables in the context of classes?
 
 After I started using Pysnooper, python has started showing me that there is an error on line 305, for example, which doesn't exist.
 Why is this? Is it because the wrapper extends the length of the program and I just don't see it?
+
+Would I be correct in saying that I still have to initialise a subclass but that I can use the super().__innit()__ to copy all the methods from the parent class?
