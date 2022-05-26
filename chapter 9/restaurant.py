@@ -28,6 +28,7 @@ class Restaurant:
             print(f"{addition} more customers have been served.")
         elif addition < 0:
             print("You cannot un-serve a customer -_-")
+
     def show_number_served(self):
         print(f"{self.customers_served} customers have been served so far.")
 

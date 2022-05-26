@@ -37,6 +37,3 @@ for value in range(5):
 person_1.total_login_attempts()
 person_1.login_reset()
 person_1.total_login_attempts()
-
-
-
