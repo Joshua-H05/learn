@@ -52,3 +52,6 @@ Side notes:
 
 
 the class "account" has now been assigned to the variable "checking", the type of which is account
+
+Are attributes simply variables in the context of classes?
+
