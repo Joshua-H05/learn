@@ -59,3 +59,9 @@ After I started using Pysnooper, python has started showing me that there is an 
 Why is this? Is it because the wrapper extends the length of the program and I just don't see it?
 
 Would I be correct in saying that I still have to initialise a subclass but that I can use the super().__innit()__ to copy all the methods from the parent class?
+
+Instances as attributes--> example: does the line numbered 4 (self.battery = Battery() create an instance of the entire class? What if more than one value is returned in the instance of the class Battery?
+e.g. class Battery:
+    def __innit__(self, brand = "Tesla", size = 75)
+        self.brand = brand
+        self.size = size
