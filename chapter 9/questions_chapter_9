@@ -54,9 +54,15 @@ Side notes:
 the class "account" has now been assigned to the variable "checking", the type of which is account
 
 Are attributes simply variables in the context of classes?
+    In python terms ONLY : Property of a class that is a member function or data item
+    Attributes vs methods: Method: Function
+    Attribute: Data & function
+    In other languages: Member functions = functions defined in a class, attributes: Data
 
 After I started using Pysnooper, python has started showing me that there is an error on line 305, for example, which doesn't exist.
 Why is this? Is it because the wrapper extends the length of the program and I just don't see it?
+    Code in wrapper does extend code. Functions call functions that call other functions--> sometimes the data passed doesn't work with one of the
+    embedded functions--> error
 
 Would I be correct in saying that I still have to initialise a subclass but that I can use the super().__innit()__ to copy all the methods from the parent class?
 
@@ -67,3 +73,42 @@ e.g. class Battery:
         self.brand = brand
         self.size = size
 perhaps something like self.battery = Battery.battery_size()?
+no--> this:
+self.battery = Battery()--> Instantiate first
+tesla = Car()
+tesla.battery.brand()
+Methods, data& functions are defined in a class, but they can only be accessed through an instance
+Class = template/mold that describes how an object should be formed
+
+ElectricCar creates an instance of the class Battery
+A class can contain instances of other classes as a property (composition--> Battery is composed into car).
+You access those by using the instance variable in
+the containing class and the properties of the containing class
+
+Tip for defining classes: Define the classes to help us discover other classes& bring clarity when writing programs (use doc string)
+a faculty is a program that is taught in a university a group of professors
+HW: define some more classes like the one above and write code for them
+
+class Student:
+    """ A student is a person who has paid to learn at a university and gain a qualification"""
+    pass
+Build a pyfile from scratch that contains all the classes--> domain model(education in this case)--> All the classes in one pyfile
+use it in another pyfile by importing--> database hidden behind
+
+Classes are mainly used to create, store and retrieve data from your domain.
+Hidden behind the domain classes: a database ( domain model talks to data base)
+We have encapsulated the concept for storing data for our educational institute behind a domain model ( we can use python classes without
+worrying about how to store and retrieve data)
+Primary reason for storing all data in database:
+    - With language defined in the domain model, you can influence& infiltrate all programs written about educational institution ( because you're using
+    clearly defined terminology, people can easily look up definitions for terms in the domain model--> Ease of use
+
+    - None of the technical terms are hidden using the domain model, making the code more comprehensible
+
+    - databases are bought from other companies--> Companies can change database language, forcing you to change
+    your code--> having a domain model means that you only have to change one program
+
+
+Databases
+    Data in a database is stored in tables--> tables (Database equivalent of a class) store specific type of date e.g. a student table where
+    the student class stores its data

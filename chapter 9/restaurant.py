@@ -23,8 +23,9 @@ class Restaurant:
             print("You cannot un-serve a customer -_-")
 
     def increment_customers_served(self, addition):
-        """if addition = 0:"""  # why doesn't this work?
-        if addition > 0:
+        if addition == 0:
+            print("No need to update. The amount of served customers has not changed. ")
+        elif addition > 0:
             self.customers_served += addition
             print(f"{addition} more customers have been served.")
         elif addition < 0:
@@ -45,6 +46,7 @@ restaurant_1.describe_restaurant()
 restaurant_1.open_restaurant()
 restaurant_1.show_number_served()
 restaurant_1.set_customers_served(5)
+restaurant_1.increment_customers_served(0)
 restaurant_1.increment_customers_served(10)
 restaurant_1.show_number_served()
 restaurant_2.describe_restaurant()
