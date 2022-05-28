@@ -65,12 +65,11 @@ class Course:
         # Can I create instances of two classes that are attributes of each other?
         self.name = name
         self.number_of_students = number_of_students
-
-        """self.professor = Professor()
-        self.subject = Subject()"""
+        self.professor = Professor("Albert", "Einstein", "Relativity", "Mechanics")
+        self.subject = Subject("Physics")
 
     def course_info(self):
-        print(f"{self.name} is a {self.subject.subject}course taught by professor {self.professor.last_name} "
+        print(f"{self.name} is a {self.subject.subject} course taught by professor {self.professor.last_name} "
               f"with {self.number_of_students} students.")
 
 
@@ -80,7 +79,8 @@ class Faculty:
 
     def __init__(self, name):
         self.name = name
-        """self.courses = Course()"""
+        self.courses = Course("Advanced Python", 500)
+        self.course = Course("Python", 400)
 
     def faculty_info(self):
         # Would I be able to add an arg to this and make it take an arbitrary number of courses?
@@ -93,9 +93,9 @@ student_1.print_student_info()
 student_1.show_student_gpa(5.6)
 professor_1 = Professor("Albert", "Einstein", "Relativity", "mechanics")
 professor_1.introduce_professor()
-course_1 = Course("introduction to Python", 300)
+course_1 = Course("introduction to relativity", 300)
 course_1.course_info()
+faculty_1 = Faculty("computer science")
+faculty_1.faculty_info()
 
 # Question: How can I make specific instances of classes attributes of a class?
-
-
