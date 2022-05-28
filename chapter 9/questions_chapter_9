@@ -92,7 +92,7 @@ HW: define some more classes like the one above and write code for them
 class Student:
     """ A student is a person who has paid to learn at a university and gain a qualification"""
     pass
-Build a pyfile from scratch that contains all the classes--> domain model(education in this case)--> All the classes in one pyfile
+Build a pyfile from scratch that contains all the classes--> domain model (education in this case)--> All the classes in one pyfile
 use it in another pyfile by importing--> database hidden behind
 
 Classes are mainly used to create, store and retrieve data from your domain.
