@@ -1,0 +1,46 @@
+These notes are connected to the file domain_model_for_educational_institute
+
+ One should not create too many parameters when initializing a class. There are three ways of avoiding this:
+ Using a dictionary containing all the necessary info
+
+ Data classes--> no need for initializers/ dunders
+
+ Building factory methods or alternative constructors:
+    Can be seen as an instance creation factory
+    E.g.
+        Creating methods in student class:
+        student = Student.create_new(first_name, last_name, gender, faculty)
+        Self cannot be used here because there is no instance, but variables can be used to set default values
+        A decorator should be used to indicate it belongs to the class and not the instance (how?)
+
+There are 3 measures of the quality of functions/ classes: Encapsulation, coupling, cohesion
+    Cohesion:
+        Something is cohesive if all values that are relevant to the concept of the class
+
+    Encapsulation:
+        hiding unnecessary details (People have just enough access for their code to work)
+        Making sure that as little as possible is accessible to the outside world
+        In other words, other classes should have access to as little data as possible to minimize coupling
+        Encapsulation ensures that most of your code still functions if something goes wrong
+
+    Coupling:
+        Interdependence
+        Coupling is necessary in order to give access to others, but should be minimized through cohesion& encapsulation
+
+Constructors:
+
+    a state is the combinations of all the values
+        The more parameters, the more possible states, some will be valid others won't. This violates the principle of encapsulation
+        because users of the class must know what the valid/correct states are, which is they shouldn't have to care about.
+        A Constructor creates instances with valid states based on minimal parameters, which allows the class to encapsulate
+        details on how it is constructed and should be used
+
+example: student = Student.create_new(first_name, last_name, gender, faculty)
+        Here, we are instantiating with a method that belongs to the class
+        the __innit__() method initializes an instance, but if you create a class method, it can run before __innit__() method runs
+        Normally, when you call a method, you call it on an instance, but in this case, you call it on the class
+        because there is no instance to call it on. This interferes with the creation process of the instance and
+        default values are given to the instance by the constructor.
+        A constructor is used when building the data you need to initiate a class in specific scenarios.
+        Afterwards, the initializer is called, giving the instance data that is specific to it (in contrast to the general
+        data given to to a variety of instances of a class by a constructor)

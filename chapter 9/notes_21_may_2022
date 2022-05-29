@@ -2,10 +2,10 @@ Floating point error: When performing calculations, python must convert decimal 
 --> round to a certain number of digits to get rid of it
 
 Debugging
-    pysnoop--> must be imported (3rd party module)
+    pysnooper--> must be imported (3rd party module)
     decorator must be used--> @pysnooper.snoop():--> @pysnooper is the module and .snoop() is the function
         shows you what python is executing line by line so you can identify the error
-    Decorator as are wrapper--> execute some code before and/or after a function is called
+    Decorators are wrappers--> execute some code before and/or after a function is called
 
 pypi.org: python package index
 
@@ -25,5 +25,4 @@ logger:
 
 One can write one's own decorators:
     If a decorator comes before a function that is called, python runs the decorator, passing the function to the decorator as a parameter--> wraps (insert code)
-     some code
-    around (before and/or after) the function
+    some code around (before and/or after) the function
