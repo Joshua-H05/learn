@@ -9,38 +9,6 @@ class Student:  # move this to the bottom and make an instance of the class facu
         self.year_of_graduation = year_of_graduation
         self.gpa = 0
 
-    # Too many parameters--> use a dictionary instead, or:
-    # Data classes--> no need or initializers/ dunders
-    # Build factory methods/ alternative constructors:
-    # Student creation factory
-    # Create methods in student class:
-    # student = Student.create_new(first_name, last_name, gender, faculty)
-    #   cannot use self because there is no instance, but variables can be used to set default values
-    # use a decorator to indicate it belongs to the class and not the instance
-    # 3 measures of the quality of functions/ classes: Encapsulation, coupling, cohesion
-    # Something is cohesive if all values that are relevant to the concept of the class
-    # Encapsulation: hiding unnecessary details--> if as little as possible is accessible to the outside world
-    # Other classes should have access to as little data as possible to minimize coupling
-    # so as much as possible functions if something goes wrong
-    # People have just enough access for their code to work
-    # Coupling: Interdependence--> Necessary in order to give access to others, but should be minimized
-    # through cohesion& encapsulation
-    # state is the combinations of all the values-->
-    # the parameters the more possible states, some will be valid others won't-->
-    # violates principle of encapsulation because users of the class must know what the valid/ correct states are
-    # Constructor creates instances with valid states based on minimal parameters-->
-    # The class encapsulates details on how it is constructed/ should be used
-    # def create_new:
-    # the __innit__() method initializes but if you create a class method, it can run before __innit__runs()
-    # Normally, when you call a method, you call it on an instance, but in this case, you call it on the class
-    # because there is no instance to call it on--> Interferes with the creation process of the instance-->
-    # default values are given to the instance by the constructor-->
-    # building the data you need to initiate a class in certain scenarios--> initializer is called
-    # Instantiating with a method that belongs to the class
-    # The code used for initializing seems quite repetitive. Is there a function that can do it for you?
-    # If not, would there be a point in making one?
-    # Avoid the ideas of repetition
-
     def print_student_info(self):
         """A student is a member of a member of an educational institution who is paying for education"""
         if self.middle_name:
@@ -102,7 +70,7 @@ class Course:
             raise ValueError  # ValueError is a class
         else:
             print(f"{self.name} is a {self.subject.subject} course taught by professor {self.professor.last_name} "
-                f"with {self.number_of_students} students.")
+                  f"with {self.number_of_students} students.")
 
     def assign_professor(self, professor):
         self.professor = professor
