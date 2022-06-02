@@ -1,5 +1,5 @@
 class Student:  # move this to the bottom and make an instance of the class faculty an attribute of this class
-    def __init__(self, first_name, last_name, age, gender, faculty, year_of_graduation, middle_name="", ):
+    def __init__(self, first_name, last_name, age, gender, faculty, year_of_graduation, middle_name=""):
         self.first_name = first_name
         self.last_name = last_name
         self.middle_name = middle_name
@@ -10,7 +10,7 @@ class Student:  # move this to the bottom and make an instance of the class facu
         self.gpa = 0
 
     def print_student_info(self):
-        """A student is a member of a member of an educational institution who is paying for education"""
+        """A student is a member of an educational institution who is paying for education"""
         if self.middle_name:
             print(f"{self.first_name} {self.middle_name} {self.last_name} is a {self.age} year old {self.gender}"
                   f"This student is a member of the faculty of {self.faculty} "

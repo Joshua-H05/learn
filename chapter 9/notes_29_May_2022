@@ -37,7 +37,8 @@ Constructors:
 
 example: student = Student.create_new(first_name, last_name, gender, faculty)
         Here, we are instantiating with a method that belongs to the class
-        the __innit__() method initializes an instance, but if you create a class method, it can run before __innit__() method runs
+        the __innit__() method initializes an instance, but if you create a class method,
+        it can run before the __innit__() method runs
         Normally, when you call a method, you call it on an instance, but in this case, you call it on the class
         because there is no instance to call it on. This interferes with the creation process of the instance and
         default values are given to the instance by the constructor.
