@@ -1,5 +1,4 @@
 import pysnooper
-import self as self
 
 
 @pysnooper.snoop()
@@ -35,9 +34,18 @@ class Restaurant:
         print(f"{self.customers_served} customers have been served so far.")
 
 
-class VeganRestuarant(Restaurant):  # Naming issue?
+class VeganRestaurant(Restaurant):  # Naming issue?
     def __init__(self, restaurant_name, cuisine_type):
         super().__init__(restaurant_name, cuisine_type)
+
+class IceCreamStand(Restaurant):
+    def __init__(self,*flavors):
+        self.flavors = flavors
+
+    def show_flavors(self):
+        print("Here are the available flavors:")
+        for flavor in self.flavors:
+            print(f"{flavor}")
 
 
 restaurant_1 = Restaurant("Butchers", "Burger")
@@ -51,4 +59,6 @@ restaurant_1.increment_customers_served(10)
 restaurant_1.show_number_served()
 restaurant_2.describe_restaurant()
 restaurant_2.open_restaurant()
-vegan_restaurant_1 = VeganRestuarant("puccini", "Italian")
+vegan_restaurant_1 = VeganRestaurant("puccini", "Italian")
+ice_cream_stand_1 = IceCreamStand("chocolate", "mint", "vanilla", "strawberry")
+ice_cream_stand_1.show_flavors()
