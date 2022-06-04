@@ -1,0 +1,40 @@
+import sqlite3--> allows python to talk to sql
+
+list/ tuple of sql statements in string format--> sql executes the strings directly
+
+conn.commit
+Database maintains a cache for you, keeps the most recent rows--> most recently used/MRU cache
+    When a row is selected, the database puts it into cache, where it can be found if it is called again
+    Cache is limited in size -->temporary
+    Issue: if something is changed in the database, the cache becomes dirty (has old data)-->
+    whenever data that is in cache is changed, the database invalidates (deletes) it-->
+    when something is inserted, it is put into a separate cache--> write cache, the database waits until it is less busy& then adds it
+    to the database (all of this happens in microseconds)
+    Issue with write cache--> between inserts and commitment time: if the database crashes, the data is lost
+    Commit: Forces the database to write the data into the database immediately--> if used too often--> slows down database exponentially-->
+    must be used judiciously
+
+cursor (c) has a fetchall() function--> c.fetchall() takes all the data from the database and returns it, works the same way as select*
+This is a table scan--> reads every line in the database--> fills in the cache--> messes up cache& takes a lot of time-->
+grinds the database to a halt
+
+
+close commands:
+    c.close()
+    conn.close()
+    Database connections expensive because one must pay for licence for each connection--> close ASAP
+
+
+
+
+
+Peewee
+    the example: don't write the code in that exact way when actually using peewee
+    Class for every table in database
+
+Model: is a class that is provided by peewee, gives all child classes ability to talk to database
+
+class People(Model):
+
+
+
