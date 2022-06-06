@@ -34,7 +34,11 @@ Peewee
 
 Model: is a class that is provided by peewee, gives all child classes ability to talk to database
 
-class People(Model):
+class People(Model):--> All peewee classes should inherit from Model
+No need to instantiate because that is taken care of by the Model class, which inherits from other classes.
+On the top of the class hierarchy is the class "Object", which all classes inherit from. By using __innit()__ function
+overwrites the instantiation process provided by the class Object. When using peewee, this should not be done. We should
+let peewee/ python's default classes deal with it.
 
 
 
