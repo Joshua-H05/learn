@@ -1,5 +1,6 @@
 # pip install peewee
-
+# General structure: As I understand, the classes Pet and Person are created and the amount or parameters taken are
+# defined. Next functions are created to populate the table
 from datetime import date  # What is datetime and what is date?
 import os  # what is os?
 from peewee import *
@@ -107,7 +108,7 @@ def show_someones_pets():
     # 3
     for pet in Pet.select().join(Person).where(Person.name == 'Bob'):  # Select the row in the pet table where the
         # person's name is Bob
-        # Is the .join() function used because data needs to be pulled from both tables?
+        # Is the .join() function used because data needs to be pulled from both tables? (connects the two based on
         print(pet.name)
 
 
