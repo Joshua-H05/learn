@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ff8f67-f962-4eb9-89c6-f02b42ead2fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../chapter 9/dbdemo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chapter 9/notes_2_June_2022" afterDir="false" />
-    </list>
+    <list default="true" id="94ff8f67-f962-4eb9-89c6-f02b42ead2fd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
