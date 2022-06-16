@@ -38,7 +38,7 @@ class Battery:
 
 
 class ElectricCar(Car):
-    def __init__(self, brand: object, year: object, model: object) -> object:
+    def __init__(self, brand, year, model):
         super().__init__(brand, year, model)
         self.range = None
         self.battery_capacity = Battery().capacity
