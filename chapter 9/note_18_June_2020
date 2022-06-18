@@ -1,0 +1,8 @@
+Databases focus on data in a highly structured tabular format whereas programming languages are more focused on single instances of things in a non-tabular format
+--> fundamental difference in how things work
+The two models don't fit together perfectly due to the different goals in mind when they were created
+Programming languages are used to execute singular tasks, whereas databases are used to guard the integrity of all data (failed to do so)-->
+Today databases are used on application levels, not on enterprise levels--> used on smaller scale than they were meant for (because databases can only be used
+on single computer systems and cannot be shared
+Code not always logical as the two entities were meant for very different things--> code developed to reconcile the two and use the two in conjunction must
+be developed with respect to both systems but cannot be truly optimized for either.

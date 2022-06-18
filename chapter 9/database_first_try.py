@@ -29,7 +29,8 @@ class Student(Model):
     faculty = ForeignKeyField(Faculty, backref="student")
     student_ID = AutoField()
     name = CharField()
-    age = AutoField()
+    age = IntegerField()  # By using age as a variable, data is concealed--> use birthday because age is derived from it
+# autofield: automatically generates an identifier for each database table-> unique primary key ensured
 
     class Meta:
         database = db
@@ -39,6 +40,7 @@ class Professor(Model):
     university = ForeignKeyField(University, backref="professor")
     faculty = ForeignKeyField(Faculty, backref="professor")  # is there a way to allow a professor to teach in
     # multiple faculties?
+    # Find lurking entities--> Class that needs to exist in order to combine the two-->
     name = CharField()
     professor_ID = AutoField()
 
@@ -53,6 +55,7 @@ def create_tables(database):
 def add_data():
     harvard_university = University(name="Harvard", school_ID=1, founding_date=date(1636, 8, 9))
     oxford_university = University(name="Oxford", school_ID=2, founding_date=date(1096, 0, 0))
+    # cannot use date due to lack fof info--> store in string format/ store the year only
     faculty_philosophy_harvard = Faculty(university=harvard_university, name="Philosophy",
                                          number_of_students=22947)
     faculty_cs_oxford = Faculty(university=oxford_university, name="Computer Science", number_of_students=25820)
@@ -92,7 +95,6 @@ if __name__ == "__main__":
     """delete_university(harvard_university)"""  #What's wrong here?
     show_faculty_students()
     db.close()
-
 
 
 # can I use Datefield() if I only know the year?
