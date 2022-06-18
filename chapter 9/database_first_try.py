@@ -40,7 +40,8 @@ class Professor(Model):
     university = ForeignKeyField(University, backref="professor")
     faculty = ForeignKeyField(Faculty, backref="professor")  # is there a way to allow a professor to teach in
     # multiple faculties?
-    # Find lurking entities--> Class that needs to exist in order to combine the two-->
+    # Find lurking entities--> Class that needs to exist in order to combine the two-->use instead of foreign keys
+    # Enables a multiple to multiple relationship
     name = CharField()
     professor_ID = AutoField()
 
