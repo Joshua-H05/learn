@@ -38,8 +38,11 @@ class VeganRestaurant(Restaurant):  # Naming issue?
     def __init__(self, restaurant_name, cuisine_type):
         super().__init__(restaurant_name, cuisine_type)
 
+
 class IceCreamStand(Restaurant):
-    def __init__(self,*flavors):
+    def __init__(self, restaurant_name, cuisine_type, *flavors):
+        super().__init__(restaurant_name, cuisine_type)  # The *arg flavors should not go under super as super is
+        # only used to allow one to call functions from the parent class
         self.flavors = flavors
 
     def show_flavors(self):
@@ -48,17 +51,18 @@ class IceCreamStand(Restaurant):
             print(f"{flavor}")
 
 
-restaurant_1 = Restaurant("Butchers", "Burger")
-restaurant_2 = Restaurant("Dominos", "Pizza")
-restaurant_1.describe_restaurant()
-restaurant_1.open_restaurant()
-restaurant_1.show_number_served()
-restaurant_1.set_customers_served(5)
-restaurant_1.increment_customers_served(0)
-restaurant_1.increment_customers_served(10)
-restaurant_1.show_number_served()
-restaurant_2.describe_restaurant()
-restaurant_2.open_restaurant()
-vegan_restaurant_1 = VeganRestaurant("puccini", "Italian")
-ice_cream_stand_1 = IceCreamStand("chocolate", "mint", "vanilla", "strawberry")
-ice_cream_stand_1.show_flavors()
+if __name__ == "__main__":
+    restaurant_1 = Restaurant("Butchers", "Burger")
+    restaurant_2 = Restaurant("Dominos", "Pizza")
+    restaurant_1.describe_restaurant()
+    restaurant_1.open_restaurant()
+    restaurant_1.show_number_served()
+    restaurant_1.set_customers_served(5)
+    restaurant_1.increment_customers_served(0)
+    restaurant_1.increment_customers_served(10)
+    restaurant_1.show_number_served()
+    restaurant_2.describe_restaurant()
+    restaurant_2.open_restaurant()
+    vegan_restaurant_1 = VeganRestaurant("puccini", "Italian")
+    ice_cream_stand_1 = IceCreamStand("chocolate", "mint", "vanilla", "strawberry")
+    ice_cream_stand_1.show_flavors()
