@@ -48,14 +48,15 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-"""person_1 = User("Joshua", "Hu", 16, "student")
-person_1.profile_maker()
-person_1.greet_user()
-for value in range(5):
-    person_1.increment_login_attempts()
-person_1.total_login_attempts()
-person_1.login_reset()
-person_1.total_login_attempts()"""
-admin_1 = Admin("Joshua", "Hu", 16, "student")
-admin_1.greet_user()
-admin_1.privileges.show_privileges()
+if __name__ == "__main__":
+    person_1 = User("Joshua", "Hu", 16, "student")
+    person_1.profile_maker()
+    person_1.greet_user()
+    for value in range(5):
+        person_1.increment_login_attempts()
+    person_1.total_login_attempts()
+    person_1.login_reset()
+    person_1.total_login_attempts()
+    admin_1 = Admin("Joshua", "Hu", 16, "student")
+    admin_1.greet_user()
+    admin_1.privileges.show_privileges()
