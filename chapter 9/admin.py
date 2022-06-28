@@ -1,5 +1,6 @@
 from users import User
 
+
 class Privileges:
     def __init__(self, list_of_privileges=("delete posts", "block users")):
         self.list_of_privileges = list_of_privileges
