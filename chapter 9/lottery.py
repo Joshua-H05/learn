@@ -24,8 +24,3 @@ while sequence != ws:
 
 
 print(f"{iterations}")
-
-
-
-
-
