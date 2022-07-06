@@ -5,7 +5,7 @@ with open(filename) as file_object:
 
 with open(filename) as file_object:
     for line in file_object:
-        print(line.strip())
+        print(line.strip().replace("Perhaps", "maybe"))
         # Why does python print every single letter separately if I write "questions" instead of "file object"?
         # Hypothesis: "file_object" is a representation of the original text,
         # whereas the variable "questions" is a giant string containing all the information of the original file
