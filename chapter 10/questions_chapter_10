@@ -2,4 +2,6 @@ In the example under "Working with a file's contents", there are blank lines bet
 (Note to self: page 189, highlighted)
 
 Why does the open() function always create and open a representation of the original file instead of opening the original?
-IS this to protect data? Perhaps for formatting reasons?
+Is this to protect data? Perhaps for formatting reasons?
+
+In my file learning_python.py, I have to reopen the file every time I want to read it. Why is this?
