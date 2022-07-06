@@ -1,0 +1,5 @@
+In the example under "Working with a file's contents", there are blank lines between the digits of pi. Why is this?
+(Note to self: page 189, highlighted)
+
+Why does the open() function always create and open a representation of the original file instead of opening the original?
+IS this to protect data? Perhaps for formatting reasons?
