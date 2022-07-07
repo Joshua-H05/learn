@@ -17,6 +17,7 @@ with open(filename) as file_object:
 questions_list = ""
 
 for line in lines:
+    print(line.strip())
     questions_list += line
 print(f"{questions_list}")
 print(len(questions_list))

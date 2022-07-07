@@ -5,3 +5,5 @@ Why does the open() function always create and open a representation of the orig
 Is this to protect data? Perhaps for formatting reasons?
 
 In my file learning_python.py, I have to reopen the file every time I want to read it. Why is this?
+
+What's the difference between open(filename, "r") and simply open()? As I understand, both allow a person to read a file.
