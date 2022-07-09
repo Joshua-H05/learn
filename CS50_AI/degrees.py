@@ -1,5 +1,7 @@
 import csv
 import sys
+
+import util
 from util import Node, StackFrontier, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
@@ -90,19 +92,29 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
-    starting_point = person_id_for_name(source)
-    goal = person_id_for_name(target)
-    if starting_point == goal:
-        print("You've entered the same person twice! ")
-    explored_nodes = []
-    neighbors = neighbors_for_person(starting_point)
-    # Need a way of appending all neighbors into a frontier
-    # This whole process needs to be put into a loop
-    for neighbor in neighbors:
-        if neighbor[1] == goal:  # Test if any of the neighbors is the goal
-            print
-
-
+    path = []
+    explored = []
+    frontier = util.QueueFrontier()
+    starting_node = util.Node(state=source, parent=None, action=None)
+    frontier.add(starting_node)
+    while True:
+        node = frontier.remove()
+        explored.append(node)
+        if node.state == target:
+            # why does the autocomplete not suggest "state" if I name the variable anything other than "node"?
+            while node.parent:
+                info = (node.action, node.state)
+                path.append(info)
+                pass
+                # need to connect the nodes to their parents
+        else:
+            neighbors = neighbors_for_person(node)
+            for neighbor in neighbors:
+                neighboring_node = Node(state=neighbor[1], parent=node.state, action=neighbor[0])
+                if neighboring_node.state == target:
+                    pass
+                else:
+                    frontier.add(neighboring_node)
 
     # TODO
     raise NotImplementedError
