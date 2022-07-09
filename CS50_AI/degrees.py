@@ -1,6 +1,5 @@
 import csv
 import sys
-
 from util import Node, StackFrontier, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
@@ -93,6 +92,16 @@ def shortest_path(source, target):
     """
     starting_point = person_id_for_name(source)
     goal = person_id_for_name(target)
+    if starting_point == goal:
+        print("You've entered the same person twice! ")
+    explored_nodes = []
+    neighbors = neighbors_for_person(starting_point)
+    # Need a way of appending all neighbors into a frontier
+    # This whole process needs to be put into a loop
+    for neighbor in neighbors:
+        if neighbor[1] == goal:  # Test if any of the neighbors is the goal
+            print
+
 
 
     # TODO
