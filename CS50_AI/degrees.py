@@ -102,11 +102,7 @@ def shortest_path(source, target):
         explored.append(node)
         if node.state == target:
             # why does the autocomplete not suggest "state" if I name the variable anything other than "node"?
-            while node.parent:
-                info = (node.action, node.state)
-                path.append(info)
-                pass
-                # need to connect the nodes to their parents
+            # need to connect the nodes to their parents
         else:
             neighbors = neighbors_for_person(node)
             for neighbor in neighbors:
