@@ -1,7 +1,6 @@
 import csv
 import sys
 
-import util
 from util import Node, StackFrontier, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
@@ -92,38 +91,33 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
-
-    path = []
-    explored = []
-    start = util.Node(state=source, parent=None, action=None)
+    start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
     frontier.add(start)
+
+    explored = set()
+
     while True:
         if frontier.empty():
             raise Exception("no solution")
+
         node = frontier.remove()
-        if node.state == target:
-            # why does the autocomplete not suggest "state" if I name the variable anything other than "node"?
-            while node.parent is not None:
-                movie = node.action
-                person = node.state
-                node = node.parent
-                path.append((movie, person))
-            path.reverse()
-            return path
-        else:
-            for action, state in neighbors_for_person(node.state):
-                if not frontier.contains_state(state) and state not in explored:
-                    child = Node(state=state, parent=node.state, action=action)
-                    if child.state == target:
-                        while child.parent is not None:
-                            movie = child.action
-                            person = child.state
-                            child = child.parent
-                            path.append((movie, person))
-                        path.reverse()
-                        return path
-                    frontier.add(child)
+
+        explored.add(node.state)
+
+        for action, state in neighbors_for_person(node.state):
+            if not frontier.contains_state(state) and state not in explored:
+                child = Node(state=state, parent=node.state, action=action)
+                if child.state == target:
+                    path = []
+                    while child.parent is not None:
+                        path.append((child.action, child.state))
+                        child = child.parent
+                    path.reverse()
+                    return path
+                frontier.add(child)
+
+
 
 
 
