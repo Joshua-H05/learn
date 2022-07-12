@@ -101,6 +101,14 @@ def shortest_path(source, target):
         if frontier.empty():
             raise Exception("no solution")
         node = frontier.remove()
+        if node.state == target:
+            while node.parent is not None:
+                movie = node.action
+                person = node.state
+                node = node.parent
+                path.append((movie, person))
+            path.reverse()
+            return path
         for action, state in neighbors_for_person(node.state):
             if not frontier.contains_state(state) and state not in explored:
                 child = Node(state=state, parent=node, action=action)
