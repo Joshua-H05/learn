@@ -101,28 +101,18 @@ def shortest_path(source, target):
         if frontier.empty():
             raise Exception("no solution")
         node = frontier.remove()
-        if node.state == target:
-            # why does the autocomplete not suggest "state" if I name the variable anything other than "node"?
-            while node.parent is not None:
-                movie = node.action
-                person = node.state
-                node = node.parent
-                path.append((movie, person))
-            path.reverse()
-            return path
-        else:
-            for action, state in neighbors_for_person(node.state):
-                if not frontier.contains_state(state) and state not in explored:
-                    child = Node(state=state, parent=node, action=action)
-                    if child.state == target:
-                        while child.parent is not None:
-                            movie = child.action
-                            person = child.state
-                            child = child.parent
-                            path.append((movie, person))
-                        path.reverse()
-                        return path
-                    frontier.add(child)
+        for action, state in neighbors_for_person(node.state):
+            if not frontier.contains_state(state) and state not in explored:
+                child = Node(state=state, parent=node, action=action)
+                if child.state == target:
+                    while child.parent is not None:
+                        movie = child.action
+                        person = child.state
+                        child = child.parent
+                        path.append((movie, person))
+                    path.reverse()
+                    return path
+                frontier.add(child)
 
 
 
