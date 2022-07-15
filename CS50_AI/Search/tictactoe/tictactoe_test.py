@@ -94,7 +94,10 @@ class TicTacToeTest(unittest.TestCase):
 
     def test_utility_draw(self):
         value = tictactoe.utility(self.draw)
-        self.assertEqual(value, 0)
+        self.assertEqual(value, None)
+
+    def test_minimum_value(self):
+        print(tictactoe.min_value(self.two_possible_actions))
 
 
 if __name__ == "__main__":
