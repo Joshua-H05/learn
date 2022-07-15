@@ -116,13 +116,16 @@ def utility(board):
 
 
 def max_value(board):
+    optimal_move = None
     if terminal(board):
         info = (utility(board), None)
         return info
     else:
-        v = -100
+        v = float("-inf")
         for move in actions(board):
             new_value = min_value(result(board, move))[0]
+            if new_value is None:
+                break
             if v < new_value:
                 v = new_value
                 optimal_move = move
@@ -131,15 +134,16 @@ def max_value(board):
 
 
 def min_value(board):
-    moves = actions(board)
     optimal_move = None
     if terminal(board):
         info = (utility(board), None)
         return info
     else:
-        v = 100
-        for move in moves:
+        v = float("inf")
+        for move in actions(board):
             new_value = max_value(result(board, move))[0]
+            if new_value is None:
+                break
             if v > new_value:
                 v = new_value
                 optimal_move = move
@@ -151,10 +155,13 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
     """
-    optimal_move = None
+
+    if terminal(board):
+        return None
+    optimal_move = ()
     current_player = player(board)
     if current_player == X:
-        max_value(board)[1]
-
-    if current_player == O:
-        min_value(board)[1]
+        optimal_move = max_value(board)[1]
+    else:
+        optimal_move = min_value(board)[1]
+    return optimal_move
