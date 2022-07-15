@@ -38,8 +38,6 @@ def player(board):
     else:
         return "Someone has made 2 moves in a row! "
 
-    raise NotImplementedError
-
 
 def actions(board):
     """
@@ -67,8 +65,6 @@ def result(board, action):
     new_board = copy.deepcopy(board)
     new_board[action[0]][action[1]] = player(board)
     return new_board
-
-    """raise NotImplementedError"""
 
 
 def winner(board):
@@ -118,8 +114,6 @@ def utility(board):
         board_value = -1
     return board_value
 
-    raise NotImplementedError
-
 
 def max_value(board):
     moves = actions(board)
@@ -147,20 +141,4 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
     """
-    if player(board) == X:
-        theoretical_move = max_value(board)
-        while True:
-            theoretical_move = max_value(theoretical_move)
-            min_value(theoretical_move)
-            if terminal(theoretical_move):
-                return theoretical_move
-                break
-    if player(board) == O:
-        theoretical_move = min_value(board)
-        while True:
-            theoretical_move = min_value(theoretical_move)
-            max_value(theoretical_move)
-            if terminal(theoretical_move):
-                return theoretical_move
-                break
-    raise NotImplementedError
+
