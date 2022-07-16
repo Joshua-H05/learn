@@ -31,7 +31,7 @@ class TicTacToeTest(unittest.TestCase):
                        [O, X, X],
                        [X, EMPTY, X]]
 
-    def test_player_x(self):
+    """def test_player_x(self):
         player = tictactoe.player(self.empty_board)
         self.assertEqual(player, "X")
 
@@ -94,17 +94,18 @@ class TicTacToeTest(unittest.TestCase):
 
     def test_utility_draw(self):
         value = tictactoe.utility(self.draw)
-        self.assertEqual(value, None)
+        self.assertEqual(value, None)"""
 
     def test_minimum_value(self):
         value = tictactoe.min_value(self.two_possible_actions)[0]
         self.assertEqual(value, -1)
+        print(tictactoe.min_value(self.two_possible_actions))
 
     def test_maximum_value(self):
         value = tictactoe.max_value(self.two_possible_actions)[0]
         self.assertEqual(value, 1)
-        print(type(tictactoe.max_value(self.two_possible_actions)[0]))
-
+        print(f"{tictactoe.max_value(self.two_possible_actions)}")
+"""
     def test_minimum_value_move(self):
         move = tictactoe.min_value(self.two_possible_actions)[1]
         self.assertEqual(move, (0, 0))
@@ -117,7 +118,7 @@ class TicTacToeTest(unittest.TestCase):
         optimal_move = tictactoe.minimax(self.two_possible_actions)
         self.assertEqual(optimal_move, (0, 0))
         print(optimal_move)
-
+"""
 
 if __name__ == "__main__":
     unittest.main()

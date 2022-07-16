@@ -115,57 +115,53 @@ def utility(board):
 
 
 def max_value(board):
-    optimal_move = None
+    possible_moves = []
     v = float("-inf")
     if terminal(board):
         info = (utility(board), None)
         return info
     else:
         for move in actions(board):
-            new_value = min_value(result(board, move))[0]
-            if new_value is None:
-                print(f"{new_value}")
+            print(type(max(min_value(result(board, move))[0], v)))
+            v = max(min_value(result(board, move))[0], v)
+            if v is None:
+                print("Max")
                 break
-            if v < new_value:
-                v = new_value
-                optimal_move = move
-        info = (v, optimal_move)
-        return info
+            possible_moves.append((v, move))
+    for move in possible_moves:
+        v = float("-inf")
+        if move[0] > v:
+            v = move[0]
+    return v, move[1]
 
 
 def min_value(board):
-    optimal_move = None
+    possible_moves = []
     v = float("inf")
     if terminal(board):
         info = (utility(board), None)
-        assert isinstance(info, tuple)
         return info
     else:
         for move in actions(board):
-            new_value = max_value(result(board, move))[0]
-            if new_value is None:
+            v = min(max_value(result(board, move))[0], v)
+            print(type(max_value(result(board, move))[0]))
+            if v is None:
+                print("min")
                 break
-            """ print(f"{max_value(result(board, move))}")"""
-            if v > new_value:
-                v = new_value
-                optimal_move = move
-                """print(f"{new_value}")"""
-        info = (v, optimal_move)
-        assert isinstance(info, tuple)
-        return info
-
-
-"""@pysnooper.snoop(depth=3)"""  # Snoops on minimax and any function minimax calls on 3 levels
+            possible_moves.append((v, move))
+    for move in possible_moves:
+        v = float("inf")
+        if move[0] < v:
+            v = move[0]
+    return v, move[1]
 
 
 def minimax(board):
     """
     Returns the optimal action for the current player on the board.
     """
-    minimum = float("-inf")
-    maximum = float("inf")
-    if terminal(board):
 
+    if terminal(board):
         return None
     current_player = player(board)
     if current_player == X:
