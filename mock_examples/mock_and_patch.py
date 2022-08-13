@@ -10,7 +10,7 @@ def calculate():
 
 # I'm developing this; I use external function
 def my_function():
-    x = calculate()  # <- how to mock calculate() ?
+    x = calculate()  # <- how to mock_examples calculate() ?
     return x
 
 
