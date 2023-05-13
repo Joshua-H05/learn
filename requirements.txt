@@ -1,0 +1,12 @@
+attrs==22.1.0
+iniconfig==1.1.1
+mock==4.0.3
+mocker==1.1.1
+packaging==21.3
+patch==1.16
+pluggy==1.0.0
+py==1.11.0
+PyAudio==0.2.12
+pyparsing==3.0.9
+pytest==7.1.2
+tomli==2.0.1
